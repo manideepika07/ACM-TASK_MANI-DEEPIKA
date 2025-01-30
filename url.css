@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: #f4e1f1; /* Light pastel violet */
+    color: #4b0082; /* Dark violet */
+  }
+  
+  header {
+    background: linear-gradient(45deg, #d9caff, #b7b0fb); /* Soft pastel gradient */
+    color: #4b0082;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #4b0082;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4b0082;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #4b0082;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #4b0082;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .project {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .skills-list li {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #e0d4fc; /* Pastel lavender */
+    color: #4b0082;
+    border-radius: 25px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4b0082;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .submit-btn {
+    background: #4b0082;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background: #6a11cb; /* Slightly lighter violet */
+  }
+  
+  footer {
+    background: #b7b0fb; /* Soft pastel violet */
+    color: #4b0082;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+  }

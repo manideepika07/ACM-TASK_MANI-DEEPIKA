@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Photo Gallery</h1>
+    <nav>
+      <input type="text" id="searchBar" placeholder="Search images...">
+    </nav>
+  </header>
+
+  <main>
+    <!-- Categories Section -->
+    <section id="categories">
+      <h2>Categories</h2>
+      <div class="categories-container">
+        <button class="category-btn" onclick="filterImages('nature')">Nature</button>
+        <button class="category-btn" onclick="filterImages('architecture')">Architecture</button>
+        <button class="category-btn" onclick="filterImages('all')">All</button>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery-container">
+        <img src="nature.jpg" alt="Nature" class="image nature">
+        
+        <img src="architecture1.jpg" alt="Architecture" class="image architecture">
+        <img src="nature2.jpg" alt="Nature" class="image nature">
+       
+        <img src="architecture2.jpg" alt="Architecture" class="image architecture">
+      </div>
+    </section>
+
+    <!-- Slideshow Section -->
+    <section id="slideshow">
+      <h2>Slideshow</h2>
+      <div class="slideshow-container">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <img id="slideshowImage" src="nature.jpg" alt="Slideshow Image">
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Photo Gallery. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

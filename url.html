@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>URL Shortener</h1>
+  <form id="urlForm">
+    <input type="url" id="longUrl" placeholder="Enter a long URL" required>
+    <button type="submit">Shorten</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Short URL</th>
+        <th>Original URL</th>
+        <th>Clicks</th>
+      </tr>
+    </thead>
+    <tbody id="urlList"></tbody>
+  </table>
+</body>
+<script>
+  const form = document.getElementById('urlForm');
+  const urlList = document.getElementById('urlList');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const longUrl = document.getElementById('longUrl').value;
+    const res = await fetch('/api/shorten', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ longUrl })
+    });
+    const data = await res.json();
+    if (data.shortUrl) loadUrls();
+  });
+
+  async function loadUrls() {
+    const res = await fetch('/api/urls');
+    const urls = await res.json();
+    urlList.innerHTML = urls.map(url => `
+      <tr>
+        <td><a href="${url.shortUrl}" target="_blank">${url.shortUrl}</a></td>
+        <td>${url.longUrl}</td>
+        <td>${url.clicks}</td>
+      </tr>
+    `).join('');
+  }
+
+  loadUrls();
+</script>
+</html>
+
+
+
+
+
